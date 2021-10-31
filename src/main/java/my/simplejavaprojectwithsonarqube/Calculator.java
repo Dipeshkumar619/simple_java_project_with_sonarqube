@@ -21,5 +21,14 @@ public class Calculator {
 	public int multiply(int a, int b)
 	{
 		return a*b;
-	}	
+	}
+	
+	public int getRandomNumber()
+	{
+	System.out.println("Vulnerability on purpose");
+	SecureRadom sr = new SecureRandom();
+	sr.setSeed(1234567L);
+	return sr.nextInt();
+	
+	}
 }
